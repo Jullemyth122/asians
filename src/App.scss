@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Kelly+Slab&display=swap');
+@font-face {
+    font-family: 'FZShuTi';
+    src: url(./font/chinese.fzstk.ttf);
+}
+
+.items {
+    
+    height: 100%;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        --dropdown:0%;
+        --_m:
+        linear-gradient(#000 0 0) calc(0%) 0% /100% var(--dropdown);
+
+        -webkit-mask: var(--_m);
+                mask: var(--_m);
+        -webkit-mask-repeat:no-repeat;
+                mask-repeat:no-repeat;
+
+    }
+    font-family: 'Cinzel Decorative', cursive;
+    color: #fff;
+}
+
+.main {
+    height: 70vh;
+    // position: relative;
+    // overflow: hidden;
+    width: 100%;
+    .m {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        &::after {
+            z-index: -2;
+            width: 100%;
+            height: 110%;
+            content: '';
+            position: absolute;
+            top: -5%;
+            right: -10%;
+            background: #FF0000;
+        }
+        &::before {
+            content: '';
+            z-index: -1;
+            width: 80%;
+            height: 105%;
+            position: absolute;
+            top: -2.5%;
+            right: -5%;
+            border: 2px solid #000;
+        }
+    }
+}
+.sub {
+    position: relative;
+    // overflow: hidden;
+    height: 100%;
+    .l-hide {
+        overflow: hidden;
+        position: relative;
+        // background-color: orange;
+    }
+
+    .letters {
+        transform: translateX(-150%);
+        display: inline-block;
+    }
+    
+    & > * > * {
+        // overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+    & > * > * > *::after {
+        width: 3px;
+        height: 70%;
+        background: #fff;
+        content: '';
+        position: absolute;
+        right: 10%;
+        top: -10%;
+    }
+    & > * > * > *::before {
+        width: 100%;
+        height: 3px;
+        top: 15%;
+        background: #fff;
+        content: '';
+        position: absolute;
+        right: -10%;
+    }
+    & > * > * > * {
+        color: #fff;
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 70%;
+        grid-template-rows: 20% 80%;
+    }
+    .text-top {
+        h3 {
+            color: #FF0000;
+            font-size: 1.5vw;
+            @media (max-width:750px) {
+                font-size: 16px;
+            }
+        }
+    }
+    .text-bottom {
+        
+        display: grid;
+        grid-template-columns: auto auto;
+        word-break: break-word;
+        width: 100%;
+        & > * {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            position: relative;
+        }
+        & > * > * {
+            // overflow: hidden;
+            width: 1.3vw;
+            @media (max-width:800px) {
+                width: 2vw;
+            }
+            @media (max-width:600px) {
+                width: 3vw;
+            }
+            display: grid;
+            // align-items: center;
+            // justify-content: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 1.5vw;
+            @media (max-width:750px) {
+                font-size: 20px;
+            }
+        }
+        .shadow {
+            mix-blend-mode: overlay;
+            color: #FF0000;
+            z-index: -1;
+            position: absolute;
+            right: 25%;
+            top: 5%;
+            .letters {
+                transform: translateX(150%);
+            }
+        }
+    }
+    .f {
+        height: 55vh;
+        position: relative;
+        .b-1 {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            left: -10%;
+            background: rgba(65, 65, 65, 0.54);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: none;
+            object-position: 50% 0%;
+        }
+    }
+    .s {
+        height: 45vh;
+        position: relative;
+        .b-2 {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            bottom: -10%;
+            left: -10%;
+            background: rgba(65, 65, 65, 0.54);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: none;
+            object-position: 50% 100%;
+        }
+    }
+    .t {
+        height: 40vh;
+        position: relative;
+        .b-3 {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            bottom: -10%;
+            left: 10%;
+            background: rgba(65, 65, 65, 0.54);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: none;
+            object-position: 100% 100%;
+        }
+    }
+}
+
+.black-top 
+{
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    z-index: -1;
+    background: black;
+}
+
+.topper {
+    // width: 100%;
+    height: 100%;
+    .d-grid {
+        grid-template-columns: 30% 30% 30%;
+    }
+}
+.bottomer {
+    height: 25vh;
+    background: black;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 30% 70%;
+    .buttonSide {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        & > * {
+            cursor: pointer;
+            width: 5vw;
+            height: 5vw;
+            @media (max-width:600px) {
+                width: 50px;
+                height: 50px;
+            }
+            border: 2px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            svg {
+                position: absolute;
+                width: 50%;
+                height: 50%;
+            }
+            &:hover svg {
+                animation: animate 0.5s cubic-bezier(.54,.87,1,1) alternate infinite;
+            }
+            @keyframes animate {
+                100% {
+                    transform: translateX(-25%);
+                }                
+            }
+        }
+    }
+    .logoSide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            font-size: 2vw;
+        }
+    }
+    .logoSemiTitle {
+        position: relative;
+        font-family: 'FZShuTi';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after {
+            width: 6vw;
+            height: 2px;
+            right: -35%;
+            background: #FF0000;
+            content: '';
+            position: absolute;
+        }
+    }
+}
